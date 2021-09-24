@@ -16,7 +16,7 @@ namespace mvcAddressBook.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IImageService _imageService;
 
-        ContactsController(ApplicationDbContext context, IImageService imageService)
+        public ContactsController(ApplicationDbContext context, IImageService imageService)
         // had to change IImageService to public to solve accessibility issue
         {
             _context = context;
