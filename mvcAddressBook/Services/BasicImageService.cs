@@ -17,9 +17,8 @@ namespace mvcAddressBook.Services
                 return "";
             }
             string imageBase64Data = Convert.ToBase64String(fileData);
-            return $"data:{extension};base64:{imageBase64Data}";
+            return $"data:{extension};base64,{imageBase64Data}";
         }
-
 
         public async Task<byte[]> ConvertFileToByteArrayAsync(IFormFile file)
         {
