@@ -28,7 +28,7 @@ namespace mvcAddressBook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(DataUtilityClass.GetConnectionString(Configuration)));
             services.AddScoped<IImageService, BasicImageService>();
             services.AddControllersWithViews();
         }
